@@ -1,0 +1,26 @@
+name: Ejecutar Tarea en Contenedor Python
+
+on: 
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  ejecutar-python:
+    container: python:3.11-slim
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Mostrar la versión de Python del contenedor
+        run: python --version
+        
+      - name: Ejecutar la acción de Python
+        run: python script.py
+        
+      - name: ¡Acción Finalizada!
+        run: echo "El flujo de trabajo de python ha terminado exitosamente"
