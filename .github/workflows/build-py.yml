@@ -22,5 +22,5 @@ jobs:
       - name: Ejecutar la acción de Python
         run: python script.py
         
-      - name: ¡Acción Finalizada!
+      - name: Acción Finalizada
         run: echo "El flujo de trabajo de python ha terminado exitosamente"
